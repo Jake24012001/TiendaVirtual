@@ -12,13 +12,18 @@ namespace CapaEntidades.Gestion
         private string nombre;
         private DateTime fechanaci;
         private string estadocivil;
-        private string telefono;
+        private int telefono;
 
         public Cliente()
         {
         }
 
-        public Cliente(int id, string nombre, DateTime fechanaci, string estadocivil, string telefono)
+        public Cliente(int id)
+        {
+            this.id = id;
+        }
+
+        public Cliente(int id, string nombre, DateTime fechanaci, string estadocivil, int telefono)
         {
             this.id = id;
             this.nombre = nombre;
@@ -30,7 +35,7 @@ namespace CapaEntidades.Gestion
         public string Nombre { get => nombre; set => nombre = value; }
         public DateTime Fechanaci { get => fechanaci; set => fechanaci = value; }
         public string Estadocivil { get => estadocivil; set => estadocivil = value; }
-        public string Telefono { get => telefono; set => telefono = value; }
+        public int Telefono { get => telefono; set => telefono = value; }
 
     }
 }

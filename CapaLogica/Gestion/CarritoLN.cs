@@ -35,7 +35,7 @@ namespace CapaLogica.Gestion
             return lista;
         }
 
-        public bool CreateCategoria(CapaEntidades.Gestion.Carrito oa)
+        public bool CreateCarrito(CapaEntidades.Gestion.Carrito oa)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace CapaLogica.Gestion
             }
         }
 
-        public bool UpdateCategoria(CapaEntidades.Gestion.Carrito oa)
+        public bool UpdateCarrito(CapaEntidades.Gestion.Carrito oa)
         {
             try
             {
@@ -60,7 +60,7 @@ namespace CapaLogica.Gestion
                 throw new LogicaExcepciones("Error al actualizar carrito en la BD");
             }
         }
-        public bool DeleteCategoria(CapaEntidades.Gestion.Carrito oa)
+        public bool DeleteCarrito(CapaEntidades.Gestion.Carrito oa)
         {
 
             try

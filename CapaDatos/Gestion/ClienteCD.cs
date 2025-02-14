@@ -8,7 +8,7 @@ namespace CapaDatos.Gestion
 {
     public class ClienteCD
     {
-        public static List<Cliente> listarCliente()
+         public static List<Cliente> listarCliente()
         {
             BDMarketDataContext DB = null;
             try
