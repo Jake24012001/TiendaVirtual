@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Presentacion.Gestion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,19 @@ namespace Presentacion.Seguridad
         {
             InitializeComponent();
         }
+
+        private void administrarCarritoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["frmAdminCarrito"] == null)
+            {
+                frmAdminCarrito fc = new frmAdminCarrito
+                {
+                    MdiParent = this
+                };
+                fc.Show();
+            }
+        }
+
+
     }
 }

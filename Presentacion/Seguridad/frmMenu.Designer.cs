@@ -34,16 +34,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.administrarLocalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administrarTransportistasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesCategoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesLocalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesTransportistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administrarCarritoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administrarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administrarCarritoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesCarritoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -90,7 +87,6 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.administrarCarritoToolStripMenuItem,
             this.administrarClienteToolStripMenuItem,
             this.administrarProductosToolStripMenuItem});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
@@ -100,64 +96,20 @@
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.administrarLocalesToolStripMenuItem,
-            this.administrarTransportistasToolStripMenuItem});
+            this.administrarCarritoToolStripMenuItem});
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(98, 24);
             this.toolStripMenuItem3.Text = "Facturacion";
             // 
-            // administrarLocalesToolStripMenuItem
-            // 
-            this.administrarLocalesToolStripMenuItem.Name = "administrarLocalesToolStripMenuItem";
-            this.administrarLocalesToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
-            this.administrarLocalesToolStripMenuItem.Text = "Administrar Locales";
-            // 
-            // administrarTransportistasToolStripMenuItem
-            // 
-            this.administrarTransportistasToolStripMenuItem.Name = "administrarTransportistasToolStripMenuItem";
-            this.administrarTransportistasToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
-            this.administrarTransportistasToolStripMenuItem.Text = "Administrar Transportistas";
-            // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reportesCategoriaToolStripMenuItem,
-            this.reportesLocalToolStripMenuItem,
-            this.reportesProveedoresToolStripMenuItem,
-            this.reportesTransportistaToolStripMenuItem});
+            this.reportesCarritoToolStripMenuItem,
+            this.reportesClienteToolStripMenuItem,
+            this.reportesProductosToolStripMenuItem});
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(82, 24);
             this.toolStripMenuItem4.Text = "Reportes";
-            // 
-            // reportesCategoriaToolStripMenuItem
-            // 
-            this.reportesCategoriaToolStripMenuItem.Name = "reportesCategoriaToolStripMenuItem";
-            this.reportesCategoriaToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
-            this.reportesCategoriaToolStripMenuItem.Text = "Reportes Categoria";
-            // 
-            // reportesLocalToolStripMenuItem
-            // 
-            this.reportesLocalToolStripMenuItem.Name = "reportesLocalToolStripMenuItem";
-            this.reportesLocalToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
-            this.reportesLocalToolStripMenuItem.Text = "Reportes Local";
-            // 
-            // reportesProveedoresToolStripMenuItem
-            // 
-            this.reportesProveedoresToolStripMenuItem.Name = "reportesProveedoresToolStripMenuItem";
-            this.reportesProveedoresToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
-            this.reportesProveedoresToolStripMenuItem.Text = "Reportes Proveedores";
-            // 
-            // reportesTransportistaToolStripMenuItem
-            // 
-            this.reportesTransportistaToolStripMenuItem.Name = "reportesTransportistaToolStripMenuItem";
-            this.reportesTransportistaToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
-            this.reportesTransportistaToolStripMenuItem.Text = "Reportes Transportista";
-            // 
-            // administrarCarritoToolStripMenuItem
-            // 
-            this.administrarCarritoToolStripMenuItem.Name = "administrarCarritoToolStripMenuItem";
-            this.administrarCarritoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.administrarCarritoToolStripMenuItem.Text = "Administrar Carrito";
             // 
             // administrarClienteToolStripMenuItem
             // 
@@ -170,6 +122,31 @@
             this.administrarProductosToolStripMenuItem.Name = "administrarProductosToolStripMenuItem";
             this.administrarProductosToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.administrarProductosToolStripMenuItem.Text = "Administrar Productos";
+            // 
+            // administrarCarritoToolStripMenuItem
+            // 
+            this.administrarCarritoToolStripMenuItem.Name = "administrarCarritoToolStripMenuItem";
+            this.administrarCarritoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.administrarCarritoToolStripMenuItem.Text = "Administrar Carrito";
+            this.administrarCarritoToolStripMenuItem.Click += new System.EventHandler(this.administrarCarritoToolStripMenuItem_Click);
+            // 
+            // reportesCarritoToolStripMenuItem
+            // 
+            this.reportesCarritoToolStripMenuItem.Name = "reportesCarritoToolStripMenuItem";
+            this.reportesCarritoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.reportesCarritoToolStripMenuItem.Text = "Reportes Carrito";
+            // 
+            // reportesClienteToolStripMenuItem
+            // 
+            this.reportesClienteToolStripMenuItem.Name = "reportesClienteToolStripMenuItem";
+            this.reportesClienteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.reportesClienteToolStripMenuItem.Text = "Reportes Cliente";
+            // 
+            // reportesProductosToolStripMenuItem
+            // 
+            this.reportesProductosToolStripMenuItem.Name = "reportesProductosToolStripMenuItem";
+            this.reportesProductosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.reportesProductosToolStripMenuItem.Text = "Reportes Productos";
             // 
             // frmMenu
             // 
@@ -198,15 +175,12 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem administrarLocalesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem administrarTransportistasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem reportesCategoriaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportesLocalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportesProveedoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportesTransportistaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem administrarCarritoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administrarClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administrarProductosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administrarCarritoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesCarritoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesProductosToolStripMenuItem;
     }
 }

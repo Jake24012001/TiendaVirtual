@@ -6,7 +6,27 @@ using System.Threading.Tasks;
 
 namespace CapaDatos.Gestion
 {
-    class ClienteCD
+    public class ClienteCD
     {
+        public static List<Cliente> listarCliente()
+        {
+            BDMarketDataContext DB = null;
+            try
+            {
+
+                using (DB = new BDMarketDataContext())
+                {
+                    return DB.Cliente.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new DatosEx("Error al listar la tabla clientes", ex);
+            }
+            finally
+            {
+                DB = null;
+            }
+        }
     }
 }

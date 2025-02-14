@@ -22,7 +22,7 @@ namespace CapaEntidades.Gestion
         {
             this.id = id;
         }
-        public Carrito(int id, int idCliente, int idProducto, decimal descuento, int stockfinal, decimal preciototal, DateTime fecha)
+        public Carrito(int id, int idCliente, int idProducto, decimal descuento, int stockfinal, decimal preciototal)
         {
             this.id = id;
             this.idCliente = idCliente;

@@ -30,7 +30,7 @@ namespace CapaDatos.Gestion
             }
         }
 
-        public static void InsertarProductos(CapaEntidades.Gestion.Carrito oc)
+        public static void InsertarCarrito(CapaEntidades.Gestion.Carrito oc)
         {
 
             BDMarketDataContext DB = null;
@@ -52,7 +52,7 @@ namespace CapaDatos.Gestion
                 DB = null;
             }
         }
-        public static void ModificarProducto(CapaEntidades.Gestion.Carrito oc)
+        public static void ModificarCarrito(CapaEntidades.Gestion.Carrito oc)
         {
 
             BDMarketDataContext DB = null;
@@ -74,7 +74,7 @@ namespace CapaDatos.Gestion
                 DB = null;
             }
         }
-        public static void EliminarProductos(CapaEntidades.Gestion.Carrito oc)
+        public static void EliminarCarrito(CapaEntidades.Gestion.Carrito oc)
         {
 
             BDMarketDataContext DB = null;
