@@ -30,6 +30,28 @@ namespace Presentacion.Seguridad
             }
         }
 
+        private void administrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["frmAdminCliente"] == null)
+            {
+                frmAdminClientes fc = new frmAdminClientes
+                {
+                    MdiParent = this
+                };
+                fc.Show();
+            }
+        }
 
+        private void administrarProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["frmAdminProducto"] == null)
+            {
+                frmAdminProductos fc = new frmAdminProductos
+                {
+                    MdiParent = this
+                };
+                fc.Show();
+            }
+        }
     }
 }

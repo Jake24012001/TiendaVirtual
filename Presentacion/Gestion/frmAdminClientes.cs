@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaDatos.Gestion;
+using CapaLogica.Gestion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,7 @@ namespace Presentacion.Gestion
         public frmAdminClientes()
         {
             InitializeComponent();
+            dataGridView1.DataSource = ClienteCD.listarCliente();
         }
     }
 }
