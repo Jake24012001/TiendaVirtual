@@ -38,5 +38,19 @@ namespace CapaLogica.Gestion
 
             return categorias.Any(c => c.Id == idProdu);
         }
+
+        public bool CreateProducto(CapaEntidades.Gestion.Producto oa)
+        {
+            try
+            {
+                ProductoCD.InsertarProductos(oa);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new LogicaExcepciones("Error al insertar producto en la BD", ex);
+            }
+        }
+
     }
 }

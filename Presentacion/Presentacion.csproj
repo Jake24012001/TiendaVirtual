@@ -90,8 +90,14 @@
     <EmbeddedResource Include="Gestion\frmAdminClientes.resx">
       <DependentUpon>frmAdminClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gestion\frmAdminProductos.resx">
+      <DependentUpon>frmAdminProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gestion\frmEditCarrito.resx">
       <DependentUpon>frmEditCarrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion\frmEditProducto.resx">
+      <DependentUpon>frmEditProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
