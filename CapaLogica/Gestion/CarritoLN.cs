@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaEntidades
+namespace CapaLogica.Gestion
 {
-    public class Class1
+    class CarritoLN
     {
     }
 }

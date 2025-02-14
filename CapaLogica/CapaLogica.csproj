@@ -41,11 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gestion\CarritoLN.cs" />
+    <Compile Include="Gestion\ClienteLN.cs" />
+    <Compile Include="Gestion\ProductoLN.cs" />
     <Compile Include="LogicaExcepciones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Gestion\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TiendaVirtual" Class="BDMarketDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-M2DUKGS;Initial Catalog=TiendaVirtual;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="CapaDatos.Properties.Settings" SettingsPropertyName="TiendaVirtualConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Carrito" Member="Carrito">
+    <Type Name="Carrito">
+      <Column Name="idCarrito" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idProducto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idCliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Descuento" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="StockFinal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Preciofinal" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Association Name="Productos_Carrito" Member="Productos" ThisKey="idProducto" OtherKey="idProducto" Type="Productos" IsForeignKey="true" />
+      <Association Name="Cliente_Carrito" Member="Cliente" ThisKey="idCliente" OtherKey="idCliente" Type="Cliente" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Productos" Member="Productos">
+    <Type Name="Productos">
+      <Column Name="idProducto" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Categoria" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Stock" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Temporada" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Productos_Carrito" Member="Carrito" ThisKey="idProducto" OtherKey="idProducto" Type="Carrito" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cliente" Member="Cliente">
+    <Type Name="Cliente">
+      <Column Name="idCliente" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="EstadoCivil" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Cliente_Carrito" Member="Carrito" ThisKey="idCliente" OtherKey="idCliente" Type="Carrito" />
+    </Type>
+  </Table>
+  <Function Name="dbo.CPEliminarCarrito" Method="CPEliminarCarrito">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPModificarCarrito" Method="CPModificarCarrito">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdC" Parameter="idC" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdP" Parameter="idP" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Descuento" Parameter="descuento" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="StockFinal" Parameter="stockFinal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PrecioFinal" Parameter="precioFinal" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPEliminarCliente" Method="CPEliminarCliente">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPEliminarProducto" Method="CPEliminarProducto">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPInsertarCarrito" Method="CPInsertarCarrito">
+    <Parameter Name="IdCarrito" Parameter="idCarrito" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdCliente" Parameter="idCliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdProducto" Parameter="idProducto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Descuento" Parameter="descuento" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="StockFinal" Parameter="stockFinal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PrecioFinal" Parameter="precioFinal" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPInsertarProducto" Method="CPInsertarProducto">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Codigo" Parameter="codigo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Categoria" Parameter="categoria" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Precio" Parameter="precio" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="Stock" Parameter="stock" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Temporada" Parameter="temporada" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CPListarCarrito" Method="CPListarCarrito">
+    <ElementType Name="CPListarCarritoResult">
+      <Column Name="idCarrito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idProducto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idCliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Descuento" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="StockFinal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Preciofinal" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPListarCliente" Method="CPListarCliente">
+    <ElementType Name="CPListarClienteResult">
+      <Column Name="idCliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="EstadoCivil" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CPListarProductos" Method="CPListarProductos">
+    <ElementType Name="CPListarProductosResult">
+      <Column Name="idProducto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Categoria" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Stock" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Temporada" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="BDMarket">
+  <DataContextMoniker Name="/BDMarketDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ddcf573f-7f08-4ab4-bece-89d7731a900a" absoluteBounds="3.5, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/BDMarketDataContext/Carrito" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9fa20c8d-d242-41d5-9aa6-8f04f5310ea3" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ec5186b8-8e4d-4253-97bc-54b0a39725e0" absoluteBounds="0.75, 5, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/BDMarketDataContext/Productos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f905dba-5fa4-4894-ac23-b82082acc241" absoluteBounds="0.765, 5.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5272ae40-9ac2-470c-ab0a-40bb7961604a" absoluteBounds="0.75, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/BDMarketDataContext/Cliente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9b39f56c-0a0d-4e8b-b04d-a6758e5969b4" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 6.17390055338542); (4.5 : 6.17390055338542); (4.5 : 2.8381982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BDMarketDataContext/Productos/Productos_Carrito" />
+      <nodes>
+        <classShapeMoniker Id="ec5186b8-8e4d-4253-97bc-54b0a39725e0" />
+        <classShapeMoniker Id="ddcf573f-7f08-4ab4-bece-89d7731a900a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.88544840494792); (3.5 : 1.88544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BDMarketDataContext/Cliente/Cliente_Carrito" />
+      <nodes>
+        <classShapeMoniker Id="5272ae40-9ac2-470c-ab0a-40bb7961604a" />
+        <classShapeMoniker Id="ddcf573f-7f08-4ab4-bece-89d7731a900a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
