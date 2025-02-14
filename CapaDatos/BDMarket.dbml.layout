@@ -27,7 +27,7 @@
         <classShapeMoniker Id="ddcf573f-7f08-4ab4-bece-89d7731a900a" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 1.88544840494792); (3.5 : 1.88544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 1.88544840494792); (3.5 : 1.88544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/BDMarketDataContext/Cliente/Cliente_Carrito" />
       <nodes>
         <classShapeMoniker Id="5272ae40-9ac2-470c-ab0a-40bb7961604a" />

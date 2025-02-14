@@ -46,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox6
@@ -204,11 +205,19 @@
             this.comboBox1.Size = new System.Drawing.Size(207, 24);
             this.comboBox1.TabIndex = 34;
             // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(603, 473);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 22);
+            this.textBox7.TabIndex = 35;
+            // 
             // frmEditProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 549);
+            this.Controls.Add(this.textBox7);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox6);
@@ -254,5 +263,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox7;
     }
 }

@@ -55,13 +55,37 @@ namespace Presentacion.Gestion
                 }
                 if (!claveRepetida)
                 {
-                    DialogResult = DialogResult.OK;
+                    // Registrar la venta si se está en el contexto correcto
+                    if (label1.Text == "Registrar Venta")
+                    {
+                        try
+                        {
+                            int idProducto = int.Parse(textBox1.Text);
+                            int cantidadVendida = int.Parse(textBox7.Text); // Suponiendo que textBox2 contiene la cantidad vendida
+                            string temporada = comboBox1.SelectedItem.ToString(); // Suponiendo que comboBoxTemporada contiene la temporada
+
+                            ProductoLN productoLN = new ProductoLN();
+                            productoLN.RegistrarVenta(idProducto, cantidadVendida, temporada);
+
+                            MessageBox.Show("Venta registrada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al registrar la venta: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        // Si no es "Registrar Venta", se procede normalmente
+                        DialogResult = DialogResult.OK;
+                    }
                 }
             }
             else
             {
                 MessageBox.Show("Por favor, complete todos los campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
         }
 
         private bool validar()

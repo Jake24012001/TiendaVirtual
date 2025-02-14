@@ -52,5 +52,18 @@ namespace CapaLogica.Gestion
             }
         }
 
+        public bool RegistrarVenta(int idProducto, int cantidadVendida, string temporada)
+        {
+            try
+            {
+                ProductoCD.RegistrarVenta(idProducto, cantidadVendida, temporada);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new LogicaExcepciones("Error al registrar la venta en la BD", ex);
+            }
+        }
+
     }
 }

@@ -10,12 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaLogica.Gestion;
 using CapaDatos;
+using CapaEntidades.Gestion;
 namespace Presentacion.Gestion
 {
     
     public partial class frmAdminCarrito: Form
     {
         CarritoLN producto = new CarritoLN();
+        ProductoLN productoLN= new ProductoLN();
         public frmAdminCarrito()
         {
             InitializeComponent();
@@ -112,6 +114,11 @@ namespace Presentacion.Gestion
         {
             frmAdminProductos frm = new frmAdminProductos();
             frm.ShowDialog();   
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

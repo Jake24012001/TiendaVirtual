@@ -14,7 +14,7 @@ namespace CapaDatos.Gestion
             try
             {
 
-                using (DB = new BDMarketDataContext ())
+                using (DB = new BDMarketDataContext())
                 {
                     return DB.Productos.ToList();
                 }
@@ -38,7 +38,7 @@ namespace CapaDatos.Gestion
 
                 using (DB = new BDMarketDataContext())
                 {
-                    DB.CPInsertarProducto(oc.Id,oc.Codigo, oc.Nombre, oc.Categoria, oc.Precio, oc.Stock, oc.Temporada, oc.Estado);
+                    DB.CPInsertarProducto(oc.Id, oc.Codigo, oc.Nombre, oc.Categoria, oc.Precio, oc.Stock, oc.Temporada, oc.Estado);
                     DB.SubmitChanges();
                 }
             }
@@ -51,5 +51,27 @@ namespace CapaDatos.Gestion
                 DB = null;
             }
         }
+
+        public static void RegistrarVenta(int idProducto, int cantidadVendida, string temporada)
+        {
+            BDMarketDataContext DB = null;
+            try
+            {
+                using (DB = new BDMarketDataContext())
+                {
+                    DB.CPRegistrarVentaProducto(idProducto, cantidadVendida, temporada);
+                    DB.SubmitChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new DatosEx("Error al registrar la venta", ex);
+            }
+            finally
+            {
+                DB = null;
+            }
+        }
+
     }
 }

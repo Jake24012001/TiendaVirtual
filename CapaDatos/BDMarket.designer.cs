@@ -157,6 +157,13 @@ namespace CapaDatos
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<CPListarProductosResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CPRegistrarVentaProducto")]
+		public int CPRegistrarVentaProducto([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdProducto", DbType="Int")] System.Nullable<int> idProducto, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CantidadVendida", DbType="Int")] System.Nullable<int> cantidadVendida, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Temporada", DbType="NVarChar(20)")] string temporada)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idProducto, cantidadVendida, temporada);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Carrito")]
