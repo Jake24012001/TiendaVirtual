@@ -18,6 +18,10 @@ namespace CapaEntidades.Gestion
         {
         }
 
+        public Carrito(int id)
+        {
+            this.id = id;
+        }
         public Carrito(int id, int idCliente, int idProducto, decimal descuento, int stockfinal, decimal preciototal, DateTime fecha)
         {
             this.id = id;

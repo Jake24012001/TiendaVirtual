@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Presentacion
+namespace Presentacion.Seguridad
 {
-    public partial class Form1: Form
+    public partial class frmMenu: Form
     {
-        public Form1()
+        public frmMenu()
         {
             InitializeComponent();
         }
